@@ -140,8 +140,17 @@ did     = "did:" un-did
 
     <section id="chaining">
     <h3>Chaining</h3>
-    <p><code>did:un-did</code> may be used with an existing <code>did:un-did</code> DID, with arbitrary levels of nesting. Each DID document has as its controller the DID obtained by removing a single "did:" prefix, forming a chain back to the non-<code>did:un-did</code> DID. The <a href="https://www.w3.org/TR/did-core/#did-controller">DID controller</a> relationship is considered to be transitive for this purpose.</code></p>
-    </section>
+    <p><code>did:un-did</code> may be used with an existing <code>did:un-did</code> DID, with arbitrary levels of nesting. Each DID document has as its controller the DID obtained by removing a single "did:" prefix, forming a chain back to the non-<code>did:un-did</code> DID. The <a href="https://www.w3.org/TR/did-core/#did-controller">DID controller</a> relationship is considered to be transitive for this purpose.</code> As you can imaging the nesting could be considered a feature with multiple layers of complexity that only could be considered computationally. </p>
+   <p>Consider the folling complex Nested Chaining approach</p>
+   <code>
+     did:un-did:did:un-did:did:example:abc123
+   </code>
+   <p>This could also be applied to the <code>did:un-did:</code> did method itself</p>
+   <code>
+     did:un-did:un-did:example:abc123
+   </code>
+   <p>This approach un-did (un-does) the did that the <code>did:un-did:</code> did method does resulting in the original <code>did:example:abc123</code> did method did. </p>
+  </section>
 
     <section id="endpoint-authentication">
     <h3>Method-specific endpoint authentication</h3>
