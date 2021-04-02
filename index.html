@@ -50,7 +50,7 @@
   <p> The full DID Identity DID scheme is defined by the following
   <a href="https://tools.ietf.org/html/std68">ABNF</a>, based on <a href="https://www.w3.org/TR/did-core/#did-syntax">DID Syntax</a>:</p>
   <pre class="nohighlight">
-did-did     = "did:" did
+did     = "did:" un-did
   </pre>
   <p>Example DID Identity DID: <code>did:un-did:example:1234</code>.</p>
   </section>
@@ -170,7 +170,7 @@ did-did     = "did:" did
     <h2>Reference Implementations</h2>
     <p> The following is an example implementation of <code>did:un-did</code> in the
         <a href="https://www.jsoftware.com/#/README">J programming language</a> to
-        resolve <code>did:un-did:did:example:123</code> to
+        resolve <code>did:un-did:example:123</code> to
         <code>did:example:123</code> in <code>O(n) + C</code> runtime where
         <code>n</code> is the number of resolutions:</p>
     <pre class="example" title="Example did:un-did implementation in J">
